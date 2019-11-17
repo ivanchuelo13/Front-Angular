@@ -19,7 +19,6 @@ export class EditComponent implements OnInit {
 
   Editar(){
     let id=localStorage.getItem("id");
-    console.log(localStorage.getItem("id"))
     this.service.getPersonaId(+id).subscribe(data=>{
     this.persona=data;
     })
@@ -32,6 +31,5 @@ export class EditComponent implements OnInit {
     this.router.navigate(["listar"]);
     })
   }
-
 
 }
