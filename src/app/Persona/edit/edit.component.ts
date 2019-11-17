@@ -14,14 +14,24 @@ export class EditComponent implements OnInit {
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit() {
-    this.Editar;
+    this.Editar();
   }
 
   Editar(){
     let id=localStorage.getItem("id");
+    console.log(localStorage.getItem("id"))
     this.service.getPersonaId(+id).subscribe(data=>{
-      this.persona=data;
+    this.persona=data;
     })
   }
+
+  Actualizar(persona:Persona){
+    this.service.updatePersona(persona).subscribe(data=>{
+    this.persona=data;
+    alert("Se Actualizo correctamente");
+    this.router.navigate(["listar"]);
+    })
+  }
+
 
 }

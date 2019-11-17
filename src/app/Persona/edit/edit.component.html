@@ -9,21 +9,21 @@
             <form action="">
                 <div class="form-group">
                     <label for="">Nombres:</label>
-                    <input type="text" class="form-control">
+                    <input [(ngModel)]="persona.name" name="name" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Apellidos:</label>
-                    <input type="text" class="form-control">
+                    <input [(ngModel)]="persona.ape" name="ape" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Cedula:</label>
-                    <input type="text" class="form-control">
+                    <input [(ngModel)]="persona.cedula" name="cedula" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Celular:</label>
-                    <input type="text" class="form-control">
+                    <input [(ngModel)]="persona.celular" name="celular" type="text" class="form-control">
                 </div>
-                <button (click)="Actualizar()" class="btn btn-danger">Guardar</button>
+                <button (click)="Actualizar(persona)" class="btn btn-danger">Modificar</button>
             </form>
         </div>
     </div>

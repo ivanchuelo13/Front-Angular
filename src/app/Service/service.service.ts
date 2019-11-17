@@ -13,6 +13,7 @@ export class ServiceService {
   
 
   getPersonas(){
+    var prueba= this.Url;
     return this.http.get<Persona[]>(this.Url);   
   }
 
