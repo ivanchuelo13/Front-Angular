@@ -28,5 +28,9 @@ export class AppComponent {
     this.router.navigate(["edit"]);
   }
 
+  ListarFacultades(){
+    this.router.navigate(["lista"])
+  }
+
 
 }

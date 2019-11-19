@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import {ServiceService}from '../app/Service/service.service';
 import {HttpClientModule}from '@angular/common/http';
 import { AddComponent } from './Persona/add/add.component';
+import { ListaComponent } from './Facultades/lista/lista.component';
+import { UpdateComponent } from './Facultades/update/update.component';
+import { InsertComponent } from './Facultades/insert/insert.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { AddComponent } from './Persona/add/add.component';
     EditComponent,
     ListarComponent,
     AddComponent,
+    ListaComponent,
+    UpdateComponent,
+    InsertComponent,
   ],
   imports: [
     BrowserModule,

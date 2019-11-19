@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/Modelo/Persona';
 import {ServiceService} from '../../Service/service.service';
 import {Router} from '@angular/router';
+import { Facultad } from 'src/app/Modelo/Facultad';
 
 @Component({
   selector: 'app-listar',
@@ -12,7 +13,6 @@ export class ListarComponent implements OnInit {
 
   personas:Persona[];
   
-
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit() {
@@ -25,6 +25,7 @@ export class ListarComponent implements OnInit {
   }
 
   Delete(persona:Persona){
+    console.log()
     this.service.deletePersona(persona).subscribe(data=>{
       this.personas= this.personas.filter(p=>p!==persona);
       alert("Se borro el usuario");
