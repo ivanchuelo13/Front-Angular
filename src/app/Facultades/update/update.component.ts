@@ -10,20 +10,21 @@ import { ServiceService } from 'src/app/Service/service.service';
 })
 export class UpdateComponent implements OnInit {
 
-  facultad: Facultad = new Facultad;
+  facultad: Facultad = new Facultad();
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit() {
-    this.sendID;
+    this.Editar();
   }
 
-  sendID(){
-    let id=localStorage.getItem("id");
-    this.service.getfacultadId(+id).subscribe(data=>{
-    this.facultad=data;
+    Editar(){
+      let id=localStorage.getItem("id");
+      console.log(id)
+      this.service.getFacultadId(+id).subscribe(data=>{
+      this.facultad=data;
     })
   }
-  
+
   Actualizar(facultad:Facultad){
     this.service.updateFacultad(facultad).subscribe(data=>{
     this.facultad=data;

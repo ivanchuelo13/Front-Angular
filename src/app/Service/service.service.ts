@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Persona } from '../Modelo/Persona';
 import { Facultad } from '../Modelo/Facultad'
-import { from } from 'rxjs';
+import { Observable  } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 
   //Cambiar los puertos en el backend  no dejar los 8080
-  UrlMysql= 'http://localhost:8080/personas';
-  UrlMongo ='http://localhost:8080/api/facultades';
+  UrlMysql= 'http://localhost:10010/personas';
+  UrlMongo ='http://localhost:10020/api/facultades';
 
 
   //Crud Basico en Mongo
@@ -25,20 +25,16 @@ export class ServiceService {
     return this.http.post<Facultad[]>(this.UrlMongo+"/create", facultad)
   }
 
-  getfacultadId(id:Number){
-    return this.http.get<Facultad>(this.UrlMysql+"/"+id);
-  }
-
-  getfacultadbyNombre(id:Number){
-    return this.http.get<Facultad>(this.UrlMysql+"/"+id);
+  getFacultadId(id:Number){
+    return this.http.get<Facultad>(this.UrlMongo+"/"+id);
   }
 
   updateFacultad(facultad:Facultad){
-    return this.http.put<Facultad>(this.UrlMysql+"/"+facultad.id ,facultad);
+    return this.http.put<Facultad>(this.UrlMongo+"/"+facultad.id ,facultad);
   }
 
   deleteFacultad(facultad:Facultad){
-    return this.http.delete<Facultad>(this.UrlMysql+"/"+facultad.id);
+    return this.http.delete<Facultad>(this.UrlMongo+"/"+facultad.id);
   }
 
 

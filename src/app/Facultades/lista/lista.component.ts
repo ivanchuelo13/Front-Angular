@@ -21,10 +21,10 @@ export class ListaComponent implements OnInit {
     this.router.navigate(["insert"]);
   }
 
-  //Capturar Id para enviarlo a la otra vista 
-  sendID(facultad:Facultad):void{
-    localStorage.setItem("id", facultad.id.toString());
-    this.router.navigate(["update"]);
+ //Capturar Id para enviarlo a la otra vista 
+  Editar(facultad:Facultad):void{
+   localStorage.setItem("id", facultad.id.toString());
+   this.router.navigate(["update"]);
   }
 
 }

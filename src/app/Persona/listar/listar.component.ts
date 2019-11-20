@@ -25,7 +25,6 @@ export class ListarComponent implements OnInit {
   }
 
   Delete(persona:Persona){
-    console.log()
     this.service.deletePersona(persona).subscribe(data=>{
       this.personas= this.personas.filter(p=>p!==persona);
       alert("Se borro el usuario");
