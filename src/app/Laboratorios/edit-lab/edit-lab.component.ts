@@ -14,18 +14,19 @@ export class EditLabComponent implements OnInit {
   constructor(private router:Router , private service:ServiceService) { }
 
   ngOnInit() {
-    this.Editar();
+   this.Editar();
   }
 
   Editar(){
     let id=localStorage.getItem("id");
-    alert(id);
     this.service.getLaboratorioId(id).subscribe(data=>{
     this.laboratorio=data;
     })
   }
 
+
   ActualizarL(laboratorio:Laboratorio){
+
     this.service.updateLaboratorio(laboratorio).subscribe(data=>{
       this.laboratorio=data;
       alert("Se actualizo el laboratorio correctamente");

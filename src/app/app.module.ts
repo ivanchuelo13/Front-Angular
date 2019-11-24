@@ -19,6 +19,7 @@ import { NewLabComponent } from './Laboratorios/new-lab/new-lab.component';
 import { ListLabComponent } from './Laboratorios/list-lab/list-lab.component';
 import { EditLabComponent } from './Laboratorios/edit-lab/edit-lab.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

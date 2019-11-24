@@ -31,7 +31,7 @@ export class ServiceService {
   }
 
   getFacultadId(id:String){
-    alert("La del servicio "+id)
+    alert("EL ID==> "+id+ " Llego al servicio")
     return this.http.get<Facultad>(this.UrlMongoF+"/"+id);
   }
 
@@ -55,7 +55,7 @@ export class ServiceService {
   }
 
   getBloqueId(id:String){
-    alert("La del servicio "+id)
+    alert("EL ID==> "+id+ " Llego al servicio")
     return this.http.get<Bloque>(this.UrlMongoB+"/"+id);
   }
 
@@ -79,7 +79,7 @@ export class ServiceService {
  }
 
  getLaboratorioId(id:String){
-   alert("La del servicio "+id)
+  alert("EL ID==> "+id+ " Llego al servicio")
    return this.http.get<Laboratorio>(this.UrlMongoL+"/"+id);
  }
 

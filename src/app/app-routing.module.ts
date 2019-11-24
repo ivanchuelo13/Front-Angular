@@ -26,7 +26,8 @@ const routes: Routes = [
   {path: 'nuevo-block', component:NuevoBlockComponent},
   {path: 'list-lab', component:ListLabComponent},
   {path: 'edit-lab', component:EditLabComponent},
-  {path: 'new-lab', component:NewLabComponent}
+  {path: 'new-lab', component:NewLabComponent},
+  {path: 'update-lab', component:UpdateComponent}
 ];
 
 @NgModule({

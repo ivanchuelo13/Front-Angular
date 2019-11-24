@@ -23,8 +23,7 @@ export class ListLabComponent implements OnInit {
 
   Editar(laboratorio:Laboratorio): void {
     localStorage.setItem("id", laboratorio.id.toLocaleString());
-    alert(laboratorio.id)
-    this.router.navigate(["new-lab"]);
+    this.router.navigate(["edit-lab"]);
   }
 
   Delete(laboratorio:Laboratorio){

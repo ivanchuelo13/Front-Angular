@@ -15,7 +15,7 @@ export class ListaComponent implements OnInit {
 
   ngOnInit() {
     this.service.getFacultadesMongo().subscribe(data=>{this.facultades=data;})
-  }/*  */
+  }
 
   VistaInsertF(){
     this.router.navigate(["insert"]);
@@ -33,7 +33,4 @@ export class ListaComponent implements OnInit {
       alert("Se borro la facultad correctamente");
     })
   }
-
-
-
 }
