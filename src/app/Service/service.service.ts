@@ -106,11 +106,11 @@ export class ServiceService {
   }
 
   updatePersona(persona:Persona){
-    return this.http.put<Persona>(this.UrlMysql+"/"+persona.id ,persona);
+    return this.http.put<Persona>(this.UrlMysql+"/"+persona.idusuarios ,persona);
   }
 
   deletePersona(persona:Persona){
-    return this.http.delete<Persona>(this.UrlMysql+"/"+persona.id);
+    return this.http.delete<Persona>(this.UrlMysql+"/"+persona.idusuarios);
   }
   
 }
