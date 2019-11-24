@@ -9,20 +9,16 @@
 </div>
 
 <div class="content">
-    <button (click)="Listar()" class="btn btn-info" style="margin-left: 10px;">Lista Usuarios</button>
+    <button (click)="ListarUsuarios()" class="btn btn-info" style="margin-left: 10px;">Lista Usuarios</button>
     <button (click)="ListarFacultades()" class="btn btn-info" style="margin-left: 10px;">Lista Facultades</button>
     <button (click)="ListarBloques()" class="btn btn-info" style="margin-left: 10px;">Lista Bloques</button>
     <button (click)="ListarLaboratorios()" class="btn btn-info" style="margin-left: 10px;">Lista Laboratorios</button>
-    <button (click)="NuevoUser()" class="btn btn-info" style="margin-left: 10px;">Nuevo Usuario</button>
-    
 
 </div>
-<div class='container main container' >
+<div class='container main container'>
     <router-outlet></router-outlet>
 
 </div>
 <div>
-<app-footer></app-footer>
+    <app-footer></app-footer>
 </div>
-
-

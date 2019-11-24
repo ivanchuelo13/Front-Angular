@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ListarComponent } from './Persona/listar/listar.component';
 
 @Component({
   selector: 'app-root',
@@ -16,16 +15,9 @@ export class AppComponent {
   constructor(private router:Router) {   
   }
 
-  Listar(){
-    this.router.navigate(["listar"]);
-  }
 
-  NuevoUser(){
-    this.router.navigate(["add"]);
-  }
-
-  Editar(){
-    this.router.navigate(["edit"]);
+  ListarUsuarios(){
+    this.router.navigate(["list-user"]);
   }
 
   ListarFacultades(){

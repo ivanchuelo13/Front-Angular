@@ -3,12 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EditComponent } from './Persona/edit/edit.component';
-import { ListarComponent } from './Persona/listar/listar.component';
 import { FormsModule } from '@angular/forms';
 import {ServiceService}from '../app/Service/service.service';
 import {HttpClientModule}from '@angular/common/http';
-import { AddComponent } from './Persona/add/add.component';
 import { ListaComponent } from './Facultades/lista/lista.component';
 import { UpdateComponent } from './Facultades/update/update.component';
 import { InsertComponent } from './Facultades/insert/insert.component';
@@ -20,15 +17,15 @@ import { ListLabComponent } from './Laboratorios/list-lab/list-lab.component';
 import { EditLabComponent } from './Laboratorios/edit-lab/edit-lab.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { EditUserComponent } from './Usuarios/edit-user/edit-user.component';
+import { ListUserComponent } from './Usuarios/list-user/list-user.component';
+import { NewUserComponent } from './Usuarios/new-user/new-user.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditComponent,
-    ListarComponent,
-    AddComponent,
     ListaComponent,
     UpdateComponent,
     InsertComponent,
@@ -40,6 +37,9 @@ import { FooterComponent } from './footer/footer.component';
     EditLabComponent,
     HeaderComponent,
     FooterComponent,
+    EditUserComponent,
+    ListUserComponent,
+    NewUserComponent,
    
   ],
   imports: [

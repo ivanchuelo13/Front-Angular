@@ -5,6 +5,7 @@ import { Facultad } from '../Modelo/Facultad'
 import { Observable  } from 'rxjs';
 import { Bloque } from '../Modelo/Bloque';
 import { Laboratorio } from '../Modelo/Laboratorio';
+import { Usuario } from '../Modelo/Usuarios';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 
   //Cambiar los puertos en el backend  no dejar los 8080
-  UrlMysql= 'http://localhost:10010/personas';
+  UrlMysql= 'http://localhost:10010/usuario';
   UrlMongoF ='http://localhost:10020/api/facultades';
   UrlMongoB = 'http://localhost:10020/api/bloques';
   UrlMongoL = 'http://localhost:10020/api/laboratorios'
@@ -91,26 +92,27 @@ export class ServiceService {
    return this.http.delete<Laboratorio>(this.UrlMongoL+"/"+laboratorio.id);
  }
 
-  //Crud Basico en Mysql
-  getPersonas(){
-    var prueba= this.UrlMysql;
-    return this.http.get<Persona[]>(this.UrlMysql);   
-  }
+ //Crud Basico en Mysql
+ getUsuario(){
+  var prueba= this.UrlMysql;
+  return this.http.get<Usuario[]>(this.UrlMysql);   
+}
 
-  createPersona(persona:Persona){
-    return this.http.post<Persona>(this.UrlMysql, persona);
-  }
+createUsuario(usuario:Usuario){
+  return this.http.post<Usuario>(this.UrlMysql, usuario);
+}
 
-  getPersonaId(id:Number){
-    return this.http.get<Persona>(this.UrlMysql+"/"+id);
-  }
+getUsuarioId(idusuarios:Number){
+  alert(idusuarios);
+  return this.http.get<Usuario>(this.UrlMysql+"/"+idusuarios);
+}
 
-  updatePersona(persona:Persona){
-    return this.http.put<Persona>(this.UrlMysql+"/"+persona.idusuarios ,persona);
-  }
+updateUsuario(usuario:Usuario){
+  return this.http.put<Usuario>(this.UrlMysql+"/"+usuario.idusuarios ,usuario);
+}
 
-  deletePersona(persona:Persona){
-    return this.http.delete<Persona>(this.UrlMysql+"/"+persona.idusuarios);
-  }
+deleteUsuario(usuario:Usuario){
+  return this.http.delete<Usuario>(this.UrlMysql+"/"+usuario.idusuarios);
+}  
   
 }
