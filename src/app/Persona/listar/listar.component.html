@@ -1,4 +1,4 @@
-<p>PLista general de usuarios</p>
+<p>Lista general de usuarios</p>
 
 <div class="container">
     <div class="card">
@@ -12,20 +12,26 @@
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
-                        <th>Cedula</th>
-                        <th>Celular</th>
+                        <th>Tipo idetificacion</th>
+                        <th>Numero idetificacion</th>
+                        <th>Rol</th>
+                        <th>E-mail</th>
+                        <th>Telefono</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let persona of personas" class="text-center">
-                        <td>{{persona.id}}</td>
-                        <td>{{persona.name}}</td>
-                        <td>{{persona.ape}}</td>
-                        <td>{{persona.cedula}}</td>
-                        <td>{{persona.celular}}</td>
+                    <tr *ngFor="let Usuario of usuarios" class="text-center">
+                        <td>{{Usuario.idusuarios}}</td>
+                        <td>{{Usuario.nombre}}</td>
+                        <td>{{Usuario.apellido}}</td>
+                        <td>{{Usuario.tipoidentificacion}}</td>
+                        <td>{{Usuario.numeroidentificacion}}</td>
+                        <td>{{Usuario.rol}}</td>
+                        <td>{{Usuario.email}}</td>
+                        <td>{{Usuario.telefono}}</td>
                         <td>
-                            <button (click)="Editar(persona)" class="btn btn-warning">EditarUsuario</button>
-                            <button (click)="Delete(persona)" class="btn btn-danger">BorrarUsuaio</button>
+                            <button (click)="Editar(Usuario)" class="btn btn-warning">EditarUsuario</button>
+                            <button (click)="Delete(Usuario)" class="btn btn-danger">BorrarUsuaio</button>
                         </td>
                     </tr>
                 </tbody>
