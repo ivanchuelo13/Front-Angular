@@ -12,6 +12,9 @@ import { AddComponent } from './Persona/add/add.component';
 import { ListaComponent } from './Facultades/lista/lista.component';
 import { UpdateComponent } from './Facultades/update/update.component';
 import { InsertComponent } from './Facultades/insert/insert.component';
+import { ListBlockComponent } from './Bloques/list-block/list-block.component';
+import { EditBlockComponent } from './Bloques/edit-block/edit-block.component';
+import { NuevoBlockComponent } from './Bloques/nuevo-block/nuevo-block.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { InsertComponent } from './Facultades/insert/insert.component';
     ListaComponent,
     UpdateComponent,
     InsertComponent,
+    ListBlockComponent,
+    EditBlockComponent,
+    NuevoBlockComponent,
   ],
   imports: [
     BrowserModule,

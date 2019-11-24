@@ -1,5 +1,5 @@
 export class Facultad{
-    id:number;
+    id:String;
     nombre:string;
     director:string;
     telefono:string

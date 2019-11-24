@@ -1,0 +1,38 @@
+<p>Lista General de Bloques</p>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Bloques</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Ubicacion</th>
+                        <th>Encargado</th>
+                        <th>Salones</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bloque of bloques" class="text-center">
+                        <td>{{bloque.id}}</td>
+                        <td>{{bloque.nombre}}</td>
+                        <td>{{bloque.ubicacion}}</td>
+                        <td>{{bloque.encargado}}</td>
+                        <td>{{bloque.salones}}</td>
+                        <td>{{bloque.active}}</td>
+                        <td>
+                            <button (click)="Editar(bloque)" class="btn btn-warning">EditarBloque</button>
+                            <button (click)="Delete(bloque)" class="btn btn-danger">BorrarBloque</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="VistaInsertB()" class="btn btn-primary">Nuevo Bloque</button>
+        </div>
+    </div>
+</div>

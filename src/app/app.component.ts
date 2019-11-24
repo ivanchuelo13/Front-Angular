@@ -32,5 +32,9 @@ export class AppComponent {
     this.router.navigate(["lista"])
   }
 
+  ListarBloques(){
+    this.router.navigate(["list-block"])
+  }
+
 
 }

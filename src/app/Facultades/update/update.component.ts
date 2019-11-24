@@ -19,8 +19,7 @@ export class UpdateComponent implements OnInit {
 
     Editar(){
       let id=localStorage.getItem("id");
-      console.log(id)
-      this.service.getFacultadId(+id).subscribe(data=>{
+      this.service.getFacultadId(id).subscribe(data=>{
       this.facultad=data;
     })
   }

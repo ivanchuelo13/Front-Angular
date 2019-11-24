@@ -17,13 +17,13 @@ export class ListaComponent implements OnInit {
     this.service.getFacultadesMongo().subscribe(data=>{this.facultades=data;})
   }
 
-  VistaInsert(){
+  VistaInsertF(){
     this.router.navigate(["insert"]);
   }
 
  //Capturar Id para enviarlo a la otra vista 
   Editar(facultad:Facultad):void{
-   localStorage.setItem("id", facultad.id.toString());
+   localStorage.setItem("id", facultad.id.toLocaleString());
    this.router.navigate(["update"]);
   }
 
