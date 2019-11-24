@@ -15,6 +15,9 @@ import { InsertComponent } from './Facultades/insert/insert.component';
 import { ListBlockComponent } from './Bloques/list-block/list-block.component';
 import { EditBlockComponent } from './Bloques/edit-block/edit-block.component';
 import { NuevoBlockComponent } from './Bloques/nuevo-block/nuevo-block.component';
+import { NewLabComponent } from './Laboratorios/new-lab/new-lab.component';
+import { ListLabComponent } from './Laboratorios/list-lab/list-lab.component';
+import { EditLabComponent } from './Laboratorios/edit-lab/edit-lab.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { NuevoBlockComponent } from './Bloques/nuevo-block/nuevo-block.component
     ListBlockComponent,
     EditBlockComponent,
     NuevoBlockComponent,
+    NewLabComponent,
+    ListLabComponent,
+    EditLabComponent,
   ],
   imports: [
     BrowserModule,

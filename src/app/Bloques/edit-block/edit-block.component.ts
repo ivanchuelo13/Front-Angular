@@ -26,7 +26,6 @@ export class EditBlockComponent implements OnInit {
   }
 
   ActualizarB(bloque:Bloque){
-    alert(bloque.id);
     this.service.updateBloque(bloque).subscribe(data=>{
       this.bloque=data;
       alert("Se actualizo correctamente el bloque");

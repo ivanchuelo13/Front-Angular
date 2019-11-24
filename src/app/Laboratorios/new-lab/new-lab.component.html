@@ -1,0 +1,26 @@
+<p>Crear un nuevo Laboratorio OP</p>
+
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Crear Laboratorio</h3>
+        </div>
+        <div class="card-body ">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nombre:</label>
+                    <input [(ngModel)]="laboratorio.nombre" name="nombre" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Tipo Laboratorio:</label>
+                    <input [(ngModel)]="laboratorio.tipo_laboratorio" name="tipo_laboratorio" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Salon:</label>
+                    <input [(ngModel)]="laboratorio.salon" name="salon" type="text" class="form-control">
+                </div>
+                <button (click)="GuardarL()" class="btn btn-success">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>

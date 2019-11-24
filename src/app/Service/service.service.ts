@@ -4,6 +4,7 @@ import { Persona } from '../Modelo/Persona';
 import { Facultad } from '../Modelo/Facultad'
 import { Observable  } from 'rxjs';
 import { Bloque } from '../Modelo/Bloque';
+import { Laboratorio } from '../Modelo/Laboratorio';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class ServiceService {
   //Cambiar los puertos en el backend  no dejar los 8080
   UrlMysql= 'http://localhost:10010/personas';
   UrlMongoF ='http://localhost:10020/api/facultades';
-  UrlMongoB = 'http://localhost:10020/api/bloques'
+  UrlMongoB = 'http://localhost:10020/api/bloques';
+  UrlMongoL = 'http://localhost:10020/api/laboratorios'
 
 
   //Crud Basico en Mongo Facultades
@@ -65,6 +67,29 @@ export class ServiceService {
     return this.http.delete<Bloque>(this.UrlMongoB+"/"+bloque.id);
   }
 
+
+   //Crud Basico Mongo Laboratorios
+
+  getLaboratoriosMongo(){
+    return this.http.get<Laboratorio[]>(this.UrlMongoL);
+ }
+
+ createLaboratorioMongo(laboratorio:Laboratorio){
+   return this.http.post<Laboratorio>(this.UrlMongoL+"/create",laboratorio);
+ }
+
+ getLaboratorioId(id:String){
+   alert("La del servicio "+id)
+   return this.http.get<Laboratorio>(this.UrlMongoL+"/"+id);
+ }
+
+ updateLaboratorio(laboratorio:Laboratorio){
+   return this.http.put<Laboratorio>(this.UrlMongoL+"/"+laboratorio.id , laboratorio);
+ }
+
+ deleteLaboratorio(laboratorio:Laboratorio){
+   return this.http.delete<Laboratorio>(this.UrlMongoL+"/"+laboratorio.id);
+ }
 
   //Crud Basico en Mysql
   getPersonas(){

@@ -22,5 +22,4 @@ export class NuevoBlockComponent implements OnInit {
       this.router.navigate(["list-block"])
     })
   }
-
 }

@@ -36,5 +36,9 @@ export class AppComponent {
     this.router.navigate(["list-block"])
   }
 
+  ListarLaboratorios(){
+    this.router.navigate(["list-lab"])
+  }
+
 
 }

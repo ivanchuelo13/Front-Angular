@@ -28,8 +28,9 @@ export class UpdateComponent implements OnInit {
     this.service.updateFacultad(facultad).subscribe(data=>{
     this.facultad=data;
     alert("Se Actualizo correctamente");
-    this.router.navigate(["listar"]);
+    this.router.navigate(["lista"]);
     })
   }
+
 
 }

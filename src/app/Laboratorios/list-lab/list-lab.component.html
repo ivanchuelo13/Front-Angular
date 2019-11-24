@@ -1,0 +1,36 @@
+<p>Lista General de Laboratorios</p>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Laboratorios</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Tipo Laboratorio</th>
+                        <th>Salon</th>
+                        <th>Disponibilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let laboratorio of laboratorios" class="text-center">
+                        <td>{{laboratorio.id}}</td>
+                        <td>{{laboratorio.nombre}}</td>
+                        <td>{{laboratorio.tipo_laboratorio}}</td>
+                        <td>{{laboratorio.salon}}</td>
+                        <td>{{laboratorio.disponibilidad}}</td>
+                        <td>
+                            <button (click)="Editar(laboratorio)" class="btn btn-warning">EditarLaboratorio</button>
+                            <button (click)="Delete(laboratorio)" class="btn btn-danger">BorrarLaboratorio</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="VistaInsertL()" class="btn btn-primary">Nuevo laboratorio</button>
+        </div>
+    </div>
+</div>

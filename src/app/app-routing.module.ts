@@ -9,6 +9,9 @@ import{InsertComponent} from './Facultades/insert/insert.component';
 import { ListBlockComponent } from './Bloques/list-block/list-block.component';
 import { EditBlockComponent } from './Bloques/edit-block/edit-block.component';
 import { NuevoBlockComponent } from './Bloques/nuevo-block/nuevo-block.component';
+import { ListLabComponent } from './Laboratorios/list-lab/list-lab.component';
+import { EditLabComponent } from './Laboratorios/edit-lab/edit-lab.component';
+import { NewLabComponent } from './Laboratorios/new-lab/new-lab.component';
 
 
 const routes: Routes = [
@@ -20,7 +23,10 @@ const routes: Routes = [
   {path: 'insert', component:InsertComponent},
   {path: 'list-block', component:ListBlockComponent},
   {path: 'edit-block', component:EditBlockComponent},
-  {path: 'nuevo-block', component:NuevoBlockComponent}
+  {path: 'nuevo-block', component:NuevoBlockComponent},
+  {path: 'list-lab', component:ListLabComponent},
+  {path: 'edit-lab', component:EditLabComponent},
+  {path: 'new-lab', component:NewLabComponent}
 ];
 
 @NgModule({
