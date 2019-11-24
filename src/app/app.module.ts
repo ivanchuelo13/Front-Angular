@@ -18,6 +18,9 @@ import { NuevoBlockComponent } from './Bloques/nuevo-block/nuevo-block.component
 import { NewLabComponent } from './Laboratorios/new-lab/new-lab.component';
 import { ListLabComponent } from './Laboratorios/list-lab/list-lab.component';
 import { EditLabComponent } from './Laboratorios/edit-lab/edit-lab.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { EditLabComponent } from './Laboratorios/edit-lab/edit-lab.component';
     NewLabComponent,
     ListLabComponent,
     EditLabComponent,
+    HeaderComponent,
+    FooterComponent,
+   
   ],
   imports: [
     BrowserModule,
