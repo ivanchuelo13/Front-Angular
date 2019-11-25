@@ -9,13 +9,18 @@
             <input formControlName="date" type="date" class="form-control" id="inputEmail4" placeholder="Fecha programada">
         </div>
         <div class="form-group col-md-6">
+            <label for="inputState">Bloque</label>
+            <select id="inputState" class="form-control">
+                <option selected>Seleccionar</option>
+                <option [ngValue]="bloque" *ngFor="let bloque of bloques">{{bloque.nombre}}</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
             <label for="inputState">Laboratorio</label>
             <select id="inputState" class="form-control">
             <option selected>Seleccionar</option>
-            <option>Software libre</option>
-            <option>Laboratorio Linux</option>
-            <option>Hardware y redes</option>
-          </select>
+            <option [ngValue]="laboratorio" *ngFor="let laboratorio of laboratorios">{{laboratorio.nombre}}</option>
+        </select>
         </div>
     </div>
     <div class="form-row">
@@ -43,11 +48,8 @@
         <div class="form-group col-md-6">
             <label for="inputState">Facultad</label>
             <select id="inputState" class="form-control">
-              <option selected>Seleccionar</option>
-              <option>Ingeniería</option>
-              <option>Derecho</option>
-              <option>Ciencias de la educación</option>
-              <option>Ciencias económicas</option>
+                <option selected>Seleccionar</option>
+                <option [ngValue]="facultad" *ngFor="let facultad of facultades">{{facultad.nombre}}</option>
             </select>
         </div>
     </div>
