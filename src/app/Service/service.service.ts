@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Persona } from '../Modelo/Persona';
-import { Facultad } from '../Modelo/Facultad'
+import { Facultad } from '../Modelo/Facultad';
 import { Observable  } from 'rxjs';
 import { Bloque } from '../Modelo/Bloque';
 import { Laboratorio } from '../Modelo/Laboratorio';
@@ -30,6 +30,12 @@ export class ServiceService {
   }
   getSolicitud(id:number){
     return this.http.get<Solicitud>(this.UrlPostgrest+'/'+id);
+  }
+  aprobarSolicitud(solicitud:Solicitud){
+    return this.http.put<Solicitud>(this.UrlPostgrest+'/aprobar/'+solicitud.idSolicitud, solicitud);
+  }
+  rechazarSolicitud(solicitud:Solicitud){
+    return this.http.put<Solicitud>(this.UrlPostgrest+'/rechazar/'+solicitud.idSolicitud, solicitud);
   }
 
 
