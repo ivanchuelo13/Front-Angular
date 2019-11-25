@@ -6,6 +6,7 @@ import { Observable  } from 'rxjs';
 import { Bloque } from '../Modelo/Bloque';
 import { Laboratorio } from '../Modelo/Laboratorio';
 import { Usuario } from '../Modelo/Usuarios';
+import { Solicitud } from '../Modelo/Solicitud';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,19 @@ export class ServiceService {
   UrlMysql= 'http://localhost:10010/usuario';
   UrlMongoF ='http://localhost:10020/api/facultades';
   UrlMongoB = 'http://localhost:10020/api/bloques';
-  UrlMongoL = 'http://localhost:10020/api/laboratorios'
+  UrlMongoL = 'http://localhost:10020/api/laboratorios';
+  UrlPostgrest = 'http://localhost:9001/Solicitudes';
+
+
+
+  //MIGUEL POSTGREST
+  getSolicitudes(){
+    return this.http.get<Solicitud[]>(this.UrlPostgrest);
+  }
+  getSolicitud(id:number){
+    return this.http.get<Solicitud>(this.UrlPostgrest+'/'+id);
+  }
+
 
 
   //Crud Basico en Mongo Facultades

@@ -1,0 +1,22 @@
+<h2>Solcicitudes</h2>
+<table>
+    <tr>
+        <th>nombre</th>
+        <th>apellid</th>
+        <th>estado</th>
+    </tr>
+    <ng-container *ngFor="let persona of Persona">
+        <tr>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.apellido}}</td>
+            <td>
+                <select>
+          <option value="0">Rechazar</option>
+          <option value="1">Aprobar  </option>
+        </select>
+            </td>
+        </tr>
+    </ng-container>
+    <button (click)="getTodasSolicitudes()">traer</button>
+    <button (click)="getSoloSolicitud()">uno</button>
+</table>

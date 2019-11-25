@@ -1,0 +1,19 @@
+export class Solicitud {
+    fecha_solicitud:Date;
+	fecha_programada:Date;
+    laboratorio:number;
+    asignatura:string;
+    docente:number;
+    practica:string;
+    facultad:number;
+    maquinas:boolean;
+    cantidad_maquinas:number;
+    material:boolean;
+    cantidad_material:number;
+    ayuda_auxiliar:boolean;
+    estudiantes:number;
+    observaciones:string;
+    hora_entrada:string;
+    hora_salida:string;
+    estado_solicitud:boolean;
+}

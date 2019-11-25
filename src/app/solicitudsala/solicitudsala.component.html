@@ -1,0 +1,121 @@
+<form style="margin: 3em" [formGroup]="form">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Fecha de solicitud</label>
+            <input formControlName="date" type="date" class="form-control" id="inputEmail4" placeholder="Fecha de solicitud">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Fecha programada</label>
+            <input formControlName="date" type="date" class="form-control" id="inputEmail4" placeholder="Fecha programada">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputState">Laboratorio</label>
+            <select id="inputState" class="form-control">
+            <option selected>Seleccionar</option>
+            <option>Software libre</option>
+            <option>Laboratorio Linux</option>
+            <option>Hardware y redes</option>
+          </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Asignatura</label>
+            <input formControlName="asign" type="text" class="form-control" id="inputAddress" placeholder="Asignatura">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputState">Docente</label>
+            <select id="inputState" class="form-control">
+                  <option selected>Seleccionar</option>
+                  <option>Pablo Carreño</option>
+                  <option>Mauricio Alonso</option>
+                  <option>Juan Velasquez</option>
+                  <option>Fredys Simanca</option>
+                  <option>Pedro Forero</option>
+                </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">Nombre de la práctica</label>
+            <input formControlName="name" type="text" class="form-control" id="inputCity" placeholder="Nombre de la práctica">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputState">Facultad</label>
+            <select id="inputState" class="form-control">
+              <option selected>Seleccionar</option>
+              <option>Ingeniería</option>
+              <option>Derecho</option>
+              <option>Ciencias de la educación</option>
+              <option>Ciencias económicas</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="custom-control custom-switch">
+                <input formControlName="useMachines" type="checkbox" class="custom-control-input" id="customSwitch4">
+                <label class="custom-control-label" for="customSwitch4">utiliza máquinas, equipo y/o herramientas </label>
+                <label> <br></label>
+            </div>
+            <input formControlName="cantMachines" type="text" class="form-control" id="inputAddress" placeholder="Cantidad - descripción">
+        </div>
+        <div class="form-group col-md-6">
+            <div class="custom-control custom-switch">
+                <input formControlName="useConsume" type="checkbox" class="custom-control-input" id="customSwitch5">
+                <label class="custom-control-label" for="customSwitch5">Utiliza material de consumo</label>
+                <label> <br></label>
+            </div>
+            <input formControlName="cantConsume" type="text" class="form-control" id="inputAddress" placeholder="Cantidad - descripción">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!--<div class="custom-control custom-switch">
+              <input formControlName="guide" type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">La solicitud tiene guía de laboratorio  </label>
+              <label> <br></label>  
+            </div>
+        
+            <div class="custom-control custom-switch">
+                <input formControlName="useLab" type="checkbox" class="custom-control-input" id="customSwitch2">
+                <label class="custom-control-label" for="customSwitch2">Requiere uso del laboratorio</label>
+                <label> <br></label>
+              </div>
+    
+            <div class="custom-control custom-switch">
+                <input formControlName="aux" type="checkbox" class="custom-control-input" id="customSwitch3" >
+                <label class="custom-control-label" for="customSwitch3">Requiere la asistencia de un auxiliar de laboratorio </label>
+            </div>-->
+        <div class="slider">
+            <mat-slide-toggle>Requiere la asistencia de un auxiliar de laboratorio</mat-slide-toggle>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Número de estudiantes a ingresar</label>
+            <input formControlName="students" type="number" class="form-control" id="inputAddress" placeholder="Número de estudiantes">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Observaciones</label>
+            <input formControlName="observation" type="text" class="form-control" id="inputAddress" placeholder="Observaciones">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Hora de entrada</label>
+            <input type="datetime" class="form-control" id="inputAddress" placeholder="Hora de entrada">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Hora de salida</label>
+            <input type="datetime" class="form-control" id="inputAddress" placeholder="Hora de salida">
+        </div>
+    </div>
+    <p>
+    </p>
+    <div class="boton_final">
+        <button mat-raised-button color="accent">Enviar Todo </button>
+    </div>
+</form>

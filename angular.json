@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Front-Angular"
+    }
+  },
+  "defaultProject": "Front-Angular",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

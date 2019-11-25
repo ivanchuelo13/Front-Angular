@@ -12,7 +12,9 @@ import { NewLabComponent } from './Laboratorios/new-lab/new-lab.component';
 import { EditUserComponent } from './Usuarios/edit-user/edit-user.component';
 import { ListUserComponent } from './Usuarios/list-user/list-user.component';
 import { NewUserComponent } from './Usuarios/new-user/new-user.component';
-
+import { HomeComponent } from './Home/home/home.component';
+import { SolicitudsalaComponent } from './solicitudsala/solicitudsala.component';
+import { AutorizacionComponent } from './autorizacion/autorizacion.component';
 
 const routes: Routes = [
   {path: 'lista', component:ListaComponent},
@@ -27,7 +29,11 @@ const routes: Routes = [
   {path: 'update-lab', component:UpdateComponent},
   {path: 'edit-user', component:EditUserComponent},
   {path:'list-user', component:ListUserComponent},
-  {path: 'new-user', component:NewUserComponent}
+  {path: 'new-user', component:NewUserComponent},
+  {path: 'home', component:HomeComponent},
+  {path: 'solicitudsala' , component:SolicitudsalaComponent},
+  {path: 'autorizacion', component:AutorizacionComponent}
+
 ];
 
 @NgModule({

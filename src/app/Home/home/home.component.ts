@@ -1,24 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
-  title = 'Front-Angular';
+export class HomeComponent implements OnInit {
 
-  /**
-   *
-   */
-  constructor(private router:Router) {   
+  title = 'Front-Angular';
+  constructor(private router:Router) { }
+
+  ngOnInit() {
   }
 
-   Acceder(){
+  
+  Acceder(){
     this.router.navigate(["inicio"])
   }
-
 
   ListarUsuarios(){
     this.router.navigate(["list-user"]);
@@ -36,13 +35,6 @@ export class AppComponent {
     this.router.navigate(["list-lab"])
   }
 
-  Solicitar(){
-    this.router.navigate(["solicitudsala"])
-  }
-
-  Miguel(){
-    this.router.navigate(["autorizacion"])
-  }
 
 
 }
