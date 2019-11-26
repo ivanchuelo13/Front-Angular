@@ -28,6 +28,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SolicitudsalaComponent } from './solicitudsala/solicitudsala.component';
 import { AutorizacionComponent } from './autorizacion/autorizacion.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -52,6 +53,7 @@ import { AutorizacionComponent } from './autorizacion/autorizacion.component';
     HomeComponent,
     SolicitudsalaComponent,
     AutorizacionComponent,
+    LoginComponent,
    
   ],
   imports: [
