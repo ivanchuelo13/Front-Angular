@@ -31,6 +31,11 @@ export class ServiceService {
   getSolicitud(id:number){
     return this.http.get<Solicitud>(this.UrlPostgrest+'/'+id);
   }
+
+  createSolicitudPostgrest(solicitud:Solicitud){
+    return this.http.post<Solicitud[]>(this.UrlPostgrest, solicitud);
+  }
+  
   aprobarSolicitud(solicitud:Solicitud){
     return this.http.put<Solicitud>(this.UrlPostgrest+'/aprobar/'+solicitud.idSolicitud, solicitud);
   }
