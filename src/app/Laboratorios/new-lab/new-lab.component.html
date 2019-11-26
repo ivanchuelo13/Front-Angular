@@ -1,5 +1,6 @@
-<p>Crear un nuevo Laboratorio OP</p>
-
+<div style="padding: 15px;"></div>
+<h4>Crear un nuevo Laboratorio OP <img src="../assets/laboratory.png"></h4>
+<div style="padding: 15px;"></div>
 <div class="container col-md-6">
     <div class="card">
         <div class="card-header">
@@ -8,16 +9,25 @@
         <div class="card-body ">
             <form action="">
                 <div class="form-group">
-                    <label for="">Nombre:</label>
-                    <input [(ngModel)]="laboratorio.nombre" name="nombre" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Nombre:</label>
+                    <input [(ngModel)]="laboratorio.nombre" name="nombre" type="text" class="form-control"
+                    placeholder="Ingrese el nombre" required  #nombreState="ngModel">
+                    <div [hidden]="nombreState.valid || nombreState.pristine" class="alert alert-danger">
+                        Name is required
+                     </div>
                 </div>
                 <div class="form-group">
                     <label for="">Tipo Laboratorio:</label>
-                    <input [(ngModel)]="laboratorio.tipo_laboratorio" name="tipo_laboratorio" type="text" class="form-control">
+                    <input [(ngModel)]="laboratorio.tipo_laboratorio" name="tipo_laboratorio" type="text" class="form-control"
+                    placeholder="Ingrese el tipo laboratorio">
                 </div>
                 <div class="form-group">
-                    <label for="">Salon:</label>
-                    <input [(ngModel)]="laboratorio.salon" name="salon" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Salon:</label>
+                    <input [(ngModel)]="laboratorio.salon" name="salon" type="text" class="form-control"
+                    placeholder="Ingrese el salon" required  #salonState="ngModel">
+                    <div [hidden]="salonState.valid || salonState.pristine" class="alert alert-danger">
+                        salon is required
+                     </div>>
                 </div>
                 <button (click)="GuardarL()" class="btn btn-success"><img src="../assets/register.png">Registrar</button>
             </form>

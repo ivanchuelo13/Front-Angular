@@ -1,5 +1,6 @@
-<p>Crear una nueva facultad OP</p>
-
+<div style="padding: 15px;"></div>
+<h4>Crear una nueva facultad OP <img src="../assets/admin.png"></h4>
+<div style="padding: 15px;"></div>
 <div class="container col-md-6">
     <div class="card">
         <div class="card-header">
@@ -8,20 +9,33 @@
         <div class="card-body ">
             <form action="">
                 <div class="form-group">
-                    <label for="">Nombre:</label>
-                    <input [(ngModel)]="facultad.nombre" name="nombre" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Nombre:</label>
+                    <input [(ngModel)]="facultad.nombre" name="nombre" type="text" class="form-control"
+                    placeholder="Ingrese el nombres" required  #nombreState="ngModel">
+                    <div [hidden]="nombreState.valid || nombreState.pristine" class="alert alert-danger">
+                        Name is required
+                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="">Director:</label>
-                    <input [(ngModel)]="facultad.director" name="director" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Director:</label>
+                    <input [(ngModel)]="facultad.director" name="director" type="text" class="form-control"
+                    placeholder="Ingrese el director" required  #directorState="ngModel">
+                    <div [hidden]="directorState.valid || directorState.pristine" class="alert alert-danger">
+                        Director is required
+                     </div>
                 </div>
                 <div class="form-group">
                     <label for="">Telefono:</label>
-                    <input [(ngModel)]="facultad.telefono" name="telefono" type="text" class="form-control">
+                    <input [(ngModel)]="facultad.telefono" name="telefono" type="text" class="form-control"
+                    placeholder="Ingrese el numero del celular o telefono">
                 </div>
                 <div class="form-group">
-                    <label for="">Fundacion:</label>
-                    <input [(ngModel)]="facultad.fundacion" name="fundacion" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Fundacion:</label>
+                    <input [(ngModel)]="facultad.fundacion" name="fundacion" type="text" class="form-control"
+                    placeholder="Ingrese el fundacion" required  #fundacionState="ngModel">
+                    <div [hidden]="fundacionState.valid || fundacionState.pristine" class="alert alert-danger">
+                        Fundacion is required
+                     </div>
                 </div>
                 <button (click)="Guardar()" class="btn btn-success"><img src="../assets/register.png">Registrar</button>
             </form>

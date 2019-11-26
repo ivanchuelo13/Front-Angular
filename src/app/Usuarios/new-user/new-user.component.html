@@ -1,6 +1,9 @@
-<p>Crear un nuevo Usuario</p>
+<div style="padding: 15px;"></div>
+<h4>Crear un nuevo Usuario <img src="../assets/add_user.png"></h4>
 
+<div style="padding: 15px;"></div>
 <div class="container col-md-6">
+        
     <div class="card">
         <div class="card-header">
             <h3>Crear Usuario</h3>
@@ -8,38 +11,54 @@
         <div class="card-body ">
             <form action="">
                 <div class="form-group">
-                    <label for="">Nombre:</label>
-                    <input [(ngModel)]="usuario.nombre" name="nombre" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Nombre:</label>
+                    <input [(ngModel)]="usuario.nombre" name="nombre" type="text" class="form-control" 
+                    placeholder="Ingrese sus nombres" required  #nombreState="ngModel">            
+                    <div [hidden]="nombreState.valid || nombreState.pristine" class="alert alert-danger">
+                        Name is required
+                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="">Apellido:</label>
-                    <input [(ngModel)]="usuario.apellido" name="apellido" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Apellido:</label>
+                    <input [(ngModel)]="usuario.apellido" name="apellido" type="text" class="form-control"
+                    placeholder="Ingrese sus apellidos" required  #apellidoState="ngModel">
+                    <div [hidden]="apellidoState.valid || apellidoState.pristine" class="alert alert-danger">
+                        surname is required
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <label for="">Tipo Identificacion:</label>
-                    <input [(ngModel)]="usuario.tipoidentificacion" name="tipoidentificacion" type="text" class="form-control">
+                    <input [(ngModel)]="usuario.tipoidentificacion" name="tipoidentificacion" type="text" class="form-control"placeholder="Ingrese su tipo Identificacion">
                 </div>
 
                 <div class="form-group">
                     <label for="">Numero Identificacion:</label>
-                    <input [(ngModel)]="usuario.numeroidentificacion" name="numeroidentificacion" type="text" class="form-control">
+                    <input [(ngModel)]="usuario.numeroidentificacion" name="numeroidentificacion" type="text" class="form-control" placeholder="Ingrese su Numero Identificacion">
                 </div>
 
                 <div class="form-group">
-                    <label for="">Rol:</label>
-                    <input [(ngModel)]="usuario.rol" name="rol" type="text" class="form-control">
+                    <label for=""><span class="required">*</span> Rol:</label>
+                    <input [(ngModel)]="usuario.rol" name="rol" type="text" class="form-control"
+                    placeholder="Ingrese su rol" required  #rolState="ngModel">
+                    <div [hidden]="rolState.valid || rolState.pristine" class="alert alert-danger">
+                        rol is required
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Correo Electronico:</label>
-                    <input [(ngModel)]="usuario.email" name="email" type="text" class="form-control">
+                    <label for=""><span class="required">*</span>Correo Electronico:</label>
+                    <input [(ngModel)]="usuario.email" name="email" type="text" class="form-control" 
+                    placeholder="Ingrese su E-mail"required  #emailState="ngModel">
+                    <div [hidden]="emailState.valid || emailState.pristine" class="alert alert-danger">
+                        E-mail is required
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="">Celular:</label>
-                    <input [(ngModel)]="usuario.telefono" name="telefono" type="text" class="form-control">
+                    <input [(ngModel)]="usuario.telefono" name="telefono" type="text" class="form-control"placeholder="Ingrese su Numero del Celular">
                 </div>
-                <button (click)="GuardarU()" class="btn btn-success">Registrar</button>
+                <button (click)="GuardarU()" class="btn btn-success"><img src="../assets/register.png">Registrar</button>
             </form>
         </div>
     </div>

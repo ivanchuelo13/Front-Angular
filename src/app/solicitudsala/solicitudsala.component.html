@@ -2,24 +2,26 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputEmail4">Fecha de solicitud</label>
-            <input formControlName="date" [(ngModel)]="solicitud.fecha_solicitud"  type="date" class="form-control" id="inputEmail4" placeholder="Fecha de solicitud">
+            <input formControlName="date" type="date" class="form-control" id="inputEmail4" placeholder="Fecha de solicitud">
         </div>
         <div class="form-group col-md-6">
-            <label for="inputEmail4">Fecha programada</label>
-            <input formControlName="date" [(ngModel)]="solicitud.fecha_programada" type="date" class="form-control" id="inputEmail4" placeholder="Fecha programada">
+            <label for="inputEmail4"><span class="required"></span>Fecha programada</label>
+            <input [(ngModel)]="usuario.nombre" formControlName="date" type="date" class="form-control" id="inputEmail4" 
+            placeholder="Fecha programada"required >
+            
         </div>
         <div class="form-group col-md-6">
             <label for="inputState">Bloque</label>
-            <select id="inputState" class="form-control" required [(ngModel)]="solicitud.bloque">
-                <option selected >Seleccionar</option>
-                <option *ngFor="let bloque of bloques" [value]="bloque.nombre" >{{bloque.nombre}}</option>
+            <select id="inputState" class="form-control">
+                <option selected>Seleccionar</option>
+                <option [ngValue]="bloque" *ngFor="let bloque of bloques">{{bloque.nombre}}</option>
             </select>
         </div>
         <div class="form-group col-md-6">
             <label for="inputState">Laboratorio</label>
-            <select id="inputState" class="form-control" [(ngModel)]="solicitud.laboratorio">
+            <select id="inputState" class="form-control">
             <option selected>Seleccionar</option>
-            <option *ngFor="let laboratorio of laboratorios" [ngValue]="laboratorio">{{laboratorio.nombre}}</option>
+            <option [ngValue]="laboratorio" *ngFor="let laboratorio of laboratorios">{{laboratorio.nombre}}</option>
         </select>
         </div>
         {{solicitud.laboratorio}}
@@ -27,11 +29,15 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputAddress">Asignatura</label>
+<<<<<<< HEAD
             <input formControlName="asign" [(ngModel)]="solicitud.asignatura" type="text" class="form-control" id="inputAddress" placeholder="Asignatura">
+=======
+            <input formControlName="asign" type="text" class="form-control" id="inputAddress" placeholder="Asignatura">
+>>>>>>> 9bb4ada7a387e52bc2b73394700156cb92784a80
         </div>
         <div class="form-group col-md-6">
             <label for="inputState">Docente</label>
-            <select id="inputState" class="form-control" [(ngModel)]="solicitud.docente">
+            <select id="inputState" class="form-control">
                   <option selected>Seleccionar</option>
                   <option>Pablo Carreño</option>
                   <option>Mauricio Alonso</option>
@@ -44,11 +50,15 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputCity">Nombre de la práctica</label>
+<<<<<<< HEAD
             <input formControlName="name" [(ngModel)]="solicitud.practica" type="text" class="form-control" id="inputCity" placeholder="Nombre de la práctica">
+=======
+            <input formControlName="name" type="text" class="form-control" id="inputCity" placeholder="Nombre de la práctica">
+>>>>>>> 9bb4ada7a387e52bc2b73394700156cb92784a80
         </div>
         <div class="form-group col-md-6">
             <label for="inputState">Facultad</label>
-            <select id="inputState" class="form-control" [(ngModel)]="solicitud.facultad" >
+            <select id="inputState" class="form-control">
                 <option selected>Seleccionar</option>
                 <option [ngValue]="facultad" *ngFor="let facultad of facultades">{{facultad.nombre}}</option>
             </select>
@@ -58,18 +68,23 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <div class="custom-control custom-switch">
-                <input formControlName="useMachines"  [(ngModel)]="solicitud.maquinas"  type="checkbox" class="custom-control-input" id="customSwitch4">
+                <input formControlName="useMachines" type="checkbox" class="custom-control-input" id="customSwitch4">
                 <label class="custom-control-label" for="customSwitch4">utiliza máquinas, equipo y/o herramientas </label>
                 <label> <br></label>
             </div>
+<<<<<<< HEAD
             <input formControlName="cantMachines" [(ngModel)]="solicitud.cantidad_maquinas" type="text" class="form-control" id="inputAddress" placeholder="Cantidad - descripción">
 
+=======
+            <input formControlName="cantMachines" type="text" class="form-control" id="inputAddress" placeholder="Cantidad - descripción">
+>>>>>>> 9bb4ada7a387e52bc2b73394700156cb92784a80
         </div>
         <div class="form-group col-md-6">
             <div class="custom-control custom-switch">
-                <input formControlName="useConsume" [(ngModel)]="solicitud.material" type="checkbox" class="custom-control-input" id="customSwitch5">
+                <input formControlName="useConsume" type="checkbox" class="custom-control-input" id="customSwitch5">
                 <label class="custom-control-label" for="customSwitch5">Utiliza material de consumo</label>
                 <label> <br></label>
+<<<<<<< HEAD
             </div>           
             <input formControlName="cantConsume" [(ngModel)]="solicitud.cantidad_material" type="text" class="form-control" id="inputAddress" placeholder="Cantidad - descripción">
         </div>
@@ -83,12 +98,39 @@
                     <label> <br></label>
 
                 </div>
+=======
             </div>
+            <input formControlName="cantConsume" type="text" class="form-control" id="inputAddress" placeholder="Cantidad - descripción">
         </div>
+    </div>
+
+    <div class="form-group">
+        <!--<div class="custom-control custom-switch">
+              <input formControlName="guide" type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">La solicitud tiene guía de laboratorio  </label>
+              <label> <br></label>  
+>>>>>>> 9bb4ada7a387e52bc2b73394700156cb92784a80
+            </div>
+        
+            <div class="custom-control custom-switch">
+                <input formControlName="useLab" type="checkbox" class="custom-control-input" id="customSwitch2">
+                <label class="custom-control-label" for="customSwitch2">Requiere uso del laboratorio</label>
+                <label> <br></label>
+              </div>
+    
+            <div class="custom-control custom-switch">
+                <input formControlName="aux" type="checkbox" class="custom-control-input" id="customSwitch3" >
+                <label class="custom-control-label" for="customSwitch3">Requiere la asistencia de un auxiliar de laboratorio </label>
+            </div>-->
+        <div class="slider">
+            <mat-slide-toggle>Requiere la asistencia de un auxiliar de laboratorio</mat-slide-toggle>
+        </div>
+    </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputAddress">Número de estudiantes a ingresar</label>
+<<<<<<< HEAD
             <input formControlName="students" [(ngModel)]="solicitud.estudiantes" type="number" class="form-control" id="inputAddress" placeholder="Número de estudiantes">
 
         </div>
@@ -96,6 +138,13 @@
             <label for="inputAddress">Observaciones</label>
             <input formControlName="observation" [(ngModel)]="solicitud.observaciones" type="text" class="form-control" id="inputAddress" placeholder="Observaciones">
 
+=======
+            <input formControlName="students" type="number" class="form-control" id="inputAddress" placeholder="Número de estudiantes">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Observaciones</label>
+            <input formControlName="observation" type="text" class="form-control" id="inputAddress" placeholder="Observaciones">
+>>>>>>> 9bb4ada7a387e52bc2b73394700156cb92784a80
         </div>
     </div>
     <div class="form-row">
@@ -104,13 +153,22 @@
                     <input formControlName="observation" [(ngModel)]="solicitud.hora_entrada" type="text" class="form-control" id="inputAddress" placeholder="Hora de Entrada">
             </div>
         <div class="form-group col-md-6">
+<<<<<<< HEAD
                 <label for="inputAddress">Hora de Salida</label>
                 <input formControlName="observation" [(ngModel)]="solicitud.hora_salida" type="text" class="form-control" id="inputAddress" placeholder="Hora de Salida">
+=======
+            <label for="inputAddress">Hora de entrada</label>
+            <input type="datetime" class="form-control" id="inputAddress" placeholder="Hora de entrada">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Hora de salida</label>
+            <input type="datetime" class="form-control" id="inputAddress" placeholder="Hora de salida">
+>>>>>>> 9bb4ada7a387e52bc2b73394700156cb92784a80
         </div>
     </div>
     <p>
     </p>
     <div class="boton_final">
-        <button (click)="GuardarSolicitud()" mat-raised-button color="accent">Enviar Todo </button>
+        <button mat-raised-button color="accent">Enviar Todo </button>
     </div>
 </form>

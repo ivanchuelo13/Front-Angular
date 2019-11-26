@@ -1,5 +1,6 @@
 <app-header>
 </app-header>
+
 <div style="text-align:center">
     <h1>
         Listas Generales Proyecto Angular
@@ -7,6 +8,7 @@
 </div>
 
 <div class="content">
+    
     <button (click)="ListarUsuarios()" class="btn btn-info" style="margin-left: 10px;">Lista Usuarios</button>
     <button (click)="ListarFacultades()" class="btn btn-info" style="margin-left: 10px;">Lista Facultades</button>
     <button (click)="ListarBloques()" class="btn btn-info" style="margin-left: 10px;">Lista Bloques</button>
@@ -14,4 +16,9 @@
     <button (click)="Solicitar()" class="btn btn-info" style="margin-left: 10px;">Solicitar Sala</button>
     <button (click)="Miguel()" class="btn btn-info" style="margin-left: 10px;">Lista Solicitudes</button>
 </div>
-<router-outlet></router-outlet>
+<div class='container main container' >
+    <router-outlet></router-outlet>
+
+</div>
+
+<app-footer></app-footer>

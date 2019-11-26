@@ -8,6 +8,7 @@ import { Laboratorio } from '../Modelo/Laboratorio';
 import { Usuario } from '../Modelo/Usuarios';
 import { Solicitud } from '../Modelo/Solicitud';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +22,7 @@ export class ServiceService {
   UrlMongoB = 'http://localhost:10020/api/bloques';
   UrlMongoL = 'http://localhost:10020/api/laboratorios';
   UrlPostgrest = 'http://localhost:9001/Solicitudes';
+  UrlPostgrestlo = 'http://Localhost:9002/login';
 
 
 
