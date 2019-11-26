@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class AutorizacionComponent implements OnInit {
   solicitudes: Solicitud[];
+  solicitud:Solicitud = new Solicitud();
+
   idbuscar: number;
   constructor(private router:Router,private servicesService: ServiceService) { }
   ngOnInit() {  

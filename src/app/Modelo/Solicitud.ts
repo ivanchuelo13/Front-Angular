@@ -16,6 +16,6 @@ export class Solicitud {
     estudiantes:number = 0;
     observaciones:string ="";
     hora_entrada:string= "";
-    hora_salida:string ="";
+    hora_salida:string = "";
     estado_solicitud:string ="";
 }
