@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { Laboratorio } from '../Modelo/Laboratorio';
 import { Bloque } from '../Modelo/Bloque';
 import { Facultad } from '../Modelo/Facultad';
+import { Solicitud } from '../Modelo/Solicitud';
 
 @Component({
   selector: 'app-solicitudsala',
@@ -17,6 +18,7 @@ export class SolicitudsalaComponent implements OnInit {
   laboratorios:Laboratorio[];
   bloques:Bloque[]; 
   facultades:Facultad[];
+  solicitud:Solicitud = new Solicitud();
   public form: DynamicFormGroup<Soli>;
   constructor(private fb: DynamicFormBuilder , private service:ServiceService, private router:Router) { }
 
@@ -31,5 +33,12 @@ export class SolicitudsalaComponent implements OnInit {
       students: '', cantMachines: '', cantConsume: '', observation: '', useMachines: false,
       useLab: false, guide: false, aux: false, useConsume: false
     });
+  }
+
+  GuardarSolicitud(){
+    this.service.createSolicitudPostgrest(this.solicitud).subscribe(data=>{
+      alert("Se registro la solicitud correctamente!");
+      this.router.navigate(["autorizacion"]);
+    })
   }
 }
