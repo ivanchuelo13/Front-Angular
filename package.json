@@ -23,7 +23,7 @@
     "@angular/router": "~8.2.0",
     "@ngrx/schematics": "^8.5.2",
     "@schematics/angular": "^8.3.19",
-    "ngx-dynamic-form-builder": "^1.0.0",
+    "ngx-dynamic-form-builder": "^1.12.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
